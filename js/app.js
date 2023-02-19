@@ -84,7 +84,10 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+  let theSum = sum(sumArr[0], sumArr[1]);
+  let theSum2 = sum(theSum[0], sumArr[2]);
 
+  return [theSum2[0], `${sumArr} was passed in as an array of numbers, and ${theSum2[0]} is their sum.`];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -105,11 +108,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  let multiply1 = multiply(multArr[0], multArr[1]);
+  let multiply2 = multiply(multiply1[0], multArr[2]);
 
+  return [multiply2[0], `The numbers ${multArr} have a product of ${multiply2[0]}.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
